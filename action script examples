@@ -1,0 +1,87 @@
+Analysis result
+
+(((((values of results from (bes property "build date" ) of it) of computer of it as integer) of results from (bes computers) whose (relevant flag of it) of (bes fixlets whose (name of it contains "AIX OS Level" AND type of it contains "Analysis")))as string)) 
+
+THIS WILL GIVE BES PROPERTY OF ANALYSIS
+
+names of properties of BES Fixlets whose (analysis flag of it and exists activation whose (active flag of it) of it and name of it = "AIX OS Level")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+__________________________________________________________________________________________________
+
+values of results of properties of BES Fixlets whose (analysis flag of it and name of it = "AIX OS Level")
+_________________________________________________________________________________________________
+
+HTML result for values of result of analysis
+
+table "border=1 cellpadding=3 cellspacing=0 style=%22border: 1pt solid #000000; border-Collapse: collapse%22" of concatenations of trs of tds of values of results of properties of BES Fixlets whose (analysis flag of it and name of it = "AIX OS Level")
+  
+  
+  ____________________________________________________________________________________________________________________________________________________________________________________
+  
+  Powershell command to invoke a text file
+  
+  Invoke-WebRequest -uri 'http://pepwap07444.corp.pep.pvt/ToolsEngData/Reports/analysis_defined_asset.txt' | Select-Object -Expand Content > C:\megha\megha.txt
+  
+  __________________________________________________________________________________________________________________________________________
+  
+  Result of an action
+  
+  (IDs of it, names of it, Names of Issuer of it,Time Issued of it,Names of Targeted Computers of it,Restart Flag of it )of (bes actions whose (name of it contains "Restart Endpoint"))
+  _______________________________________________________________________________________________________________________________________________
+  Member action of an action result
+ (((IDs of it, names of it, Names of Issuer of it, Time Issued of it, Names of Targeted Computers of it,Restart Flag of it, end date of it,end time_of_day of it )of bes actions whose (name of it contains "#{IEMPlan 17147309,101,O}")))
+
+_______________________________________________________________________________________________________________________________________
+
+Expired action web reports
+<?relevance (html "<option value=%22" & item 2 of it & html "%22>" & item 0 of it & " (" & item 1 of it & ")" & html "</option>") of (preceding text of first "||" of it, following text of last "||" of it, preceding text of first "||" of following text of first "||" of it) of unique values of(name of it & "||" & id of it as string & "||" & ((year of it as string & "/" & month of it as two digits & "/" & day_of_month of it as two digits) of date(local time zone) of it & " "& (two digit hour of it as string & ":" & two digit minute of it as string & ":" & two digit second of it as string) of time (local time zone) of it) of time issued of it as string & name of issuer of it) of bes actions whose (state of it = "Expired" )?>
+------------------------------------------------------------------------------------------------------------------------------
+boot time
+
+( names of it, operating systems of it, IP Addresses of it, values of results (bes property "Uptime", it)  ) of bes computers whose (
+    value of result from (bes property "Device Type") of it starts with "Server" and
+    now - (it as time) of value of result from (bes property "boot time") of it > 90 * day
+)
+----------------------------------------------------------------------------------------------------------------------------------------
+Relevance to find the Boot time
+
+( values of it ) of results of bes properties "Boot time" 
+_________________________________________________________________________________________________________________________________________
+
+(name of fixlet of it, source severity of fixlet of it, last became nonrelevant of it) of results from (bes fixlets whose ( fixlet flag of it = true)) whose (exists last became relevant of it and last became nonrelevant of it > (now - 30 *day) AND last became nonrelevant of it < (now) and relevant flag of it = false) of bes computers whose (name of it = "PEPWAP07431") 
+
+
+____________________________________________________________________________________________
+
+Relevance of server patched since last 30 days
+unique values of names of computers of results (bes computers, bes fixlets whose (name of site of it = "Enterprise Security")) whose( exists last became nonrelevant of it and last became nonrelevant of it < now - 3*day )
+
+______________________________________________________________________________________________________________________________________
+
+Bes relevance for expired actions
+
+ids of BES actions whose ( (Name of Issuer of it is not contained by set of ("SvcPAMAccnt@corp.pep.pvt";"Rhythm")) and (state of it = "Expired") and name of action of it as lowercase contains "2019m") 
+
+ids of top level bes actions  whose ((Name of Issuer of it is not contained by set of ("SvcPAMAccnt@corp.pep.pvt";"Rhythm")) and (state of it = "Expired") and (name of it as lowercase does not contain "2019m"))
+_____________________________________________________________________________________________________________________________________________
+
+
+
+
+(name of computer of it) of results from (bes fixlet whose (display name of site of it = "Patches for Windows" and (exists last became non relevant of it and last became non relevant of it - now < 30 * day )
+
+From <https://forum.bigfix.com/t/speeding-up-api-and-session-relevance-queries/15366> 
+
+( bes computers, bes fixlets  whose( name of site of it = "enterprise security")) of bes fixlets whose (exists last became relevant of it and last became relevant of it > now - 365*day)
+Number of results ( bes computers, bes fixlets whose (name of site of it = "Patches for windows")) whose (exists last became relevant of it and last became relevant of it > now - 3*day)
+
+
+(name of computer of it) of results (bes computers, bes fixlets ) whose (exists last became nonrelevant of it and last became nonrelevant of it < now - 3*day )
+
+
+________________________________________________________________________________________________________________________________________
+
