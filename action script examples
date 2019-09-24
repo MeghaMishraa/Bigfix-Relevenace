@@ -85,3 +85,38 @@ Number of results ( bes computers, bes fixlets whose (name of site of it = "Patc
 
 ________________________________________________________________________________________________________________________________________
 
+
+Expired action
+
+
+(ids of bes actions whose (state of it = "Expired" and name of issuer of it = "rbaUser" )as string)
+
+(ids of bes actions whose (state of it = "Expired" and name of issuer of it = "rbaUser" )as string)
+
+
+iem login --server=https://10.132.18.151:52311 --user=Admin --password=Admin098 
+iem GET query --releve
+
+iem get action/id/status
+
+iem get query --relevance="(ID of it) of bes actions whose (state of it is %22Expired%22)" and issuer of it is %22rbaUser%22)">>
+
+
+set cmd="(iem get query --relevance="(ID of it) of bes actions whose (state of it is %22Expired%22 and issuer of it is %22rbaUser%22)")"
+
+for each id >>x.txt
+del x.txt
+
+for /f\%%i in (>>
+
+
+
+for /f\%%i in (set i =iem get query --relevance="(ID of it) of bes actions whose (state of it is %22Expired%22)") do 
+iem get action/ECHO%%i
+
+
+94
+down vote
+accepted
+FOR /r %%X IN (*) DO (ECHO %%X & DEL %%X)
+_________________________________________________________________________________________________________________________________________
