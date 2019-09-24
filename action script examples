@@ -120,3 +120,58 @@ down vote
 accepted
 FOR /r %%X IN (*) DO (ECHO %%X & DEL %%X)
 _________________________________________________________________________________________________________________________________________
+Action status
+
+<?Relevance
+trs of
+(
+td of
+(
+name of computer of item 1 of it
+)
+& td of
+(
+" | "
+)
+& td of
+(
+operating system of computer of item 1 of it as string
+)
+& td of 
+(
+" | "
+)
+& td of 
+(
+last report time of computer of item 1 of it as string
+)
+& td of 
+(
+" | "
+)
+& td of
+(
+detailed statuses of item 1 of it as string
+)
+& td of
+(
+" | "
+)
+& td of
+(
+status of item 1 of it as string
+)
+)
+of
+(
+it, results
+of it
+)
+of bes actions whose
+(
+name of it = "Install or Upgrade Scanner (Do not Delete)"
+)
+?>
+____________________________________________________________________________________________________
+ last patch date/time and last reboot reporting from Bigfix
+curl -k --insecure --user ID:passwd --data-urlencode "relevance=((values of results (item 0 of it , item 1 of it)), (values of results (item 0 of it , item 2 of it)), concatenation ""|"" of (values of results (item 0 of it , item 3 of it)) , concatenation ""|"" of (values of results (item 0 of it , item 4 of it))) of (bes computers , bes property ""ID"" , bes property ""Computer Name"" , bes property ""Last Patch Date"" , bes property ""Patch and Install Date"")" https://pepwap07913:52311/api/query -o c:\temp\PatchDate.xml
